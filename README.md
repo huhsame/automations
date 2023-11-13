@@ -1,6 +1,9 @@
 
 # Automations
 
+[한국어 README](README_ko.md)
+
+
 ### Extract Audio
 Downloads the audio from a YouTube URL.
 ```bash
