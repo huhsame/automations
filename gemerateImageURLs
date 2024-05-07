@@ -1,0 +1,17 @@
+function generateImageURLs() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var baseUrl = "https://shania-tips.s3.ap-northeast-2.amazonaws.com/2024.04.09+-+%E1%84%89%E1%85%A3%E1%84%82%E1%85%B5%E1%84%8B%E1%85%A1+%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%89%E1%85%B3%E1%84%90%E1%85%A1+%E1%84%8B%E1%85%AA%E1%86%AB%E1%84%89%E1%85%A5%E1%86%BC/";
+  var startRow = 1; // 시작 행 번호
+  var startCol = 2; // 시작 열 번호 (B열)
+  var numImages = 100; // 생성할 이미지 URL의 수
+
+  for (var i = 0; i < numImages; i++) {
+    // 현재 이미지 번호에 따라 행과 열 위치 계산
+    var currentRow = startRow + Math.floor(i / 5);
+    var currentCol = startCol + (i % 5);
+    var imageUrl = baseUrl + (i + 1) + ".png"; // URL 생성
+    
+    // 계산된 위치에 URL 설정
+    sheet.getRange(currentRow, currentCol).setValue(imageUrl);
+  }
+}
