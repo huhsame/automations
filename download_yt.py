@@ -61,8 +61,8 @@ def download_instagram_video(url, download_folder):
 def download_video(url, download_folder):
     if "youtube.com" in url or "youtu.be" in url:
         download_youtube_video(url, download_folder)
-    elif "instagram.com" in url:
-        download_instagram_video(url, download_folder)
+    # elif "instagram.com" in url:
+    # download_instagram_video(url, download_folder)
 
 
 def handle_csv(csv_filename, csv_folder, download_folder):
