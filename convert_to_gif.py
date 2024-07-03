@@ -33,6 +33,7 @@ def convert_videos_to_gifs(
             video_clip.write_gif(gif_path)
 
             print(f"Converted {video_path} to {gif_path}")
+    print("Finished")
 
 
 def main():
@@ -46,7 +47,7 @@ def main():
         "--extensions",
         type=str,
         nargs="+",
-        default=[".mov", ".mp4"],
+        default=[".mov", ".mp4", ".MOV", ".MP4"],
         help="List of video file extensions to convert",
     )
     parser.add_argument(
